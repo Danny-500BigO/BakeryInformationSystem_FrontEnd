@@ -1,0 +1,51 @@
+<div class="p-fluid">
+  <p-messages [value]="messages"></p-messages>
+
+  <form class="Submit" [formGroup]="userRegistartionForm">
+    <div class="field">
+      <label>First name</label>
+      <input pInputText type="text" formControlName="firstName" />
+    </div>
+
+    <div class="field">
+      <label>Last name</label>
+      <input pInputText type="text" formControlName="LastName" />
+    </div>
+
+    <div class="field">
+      <label>Date Of Birth</label>
+      <p-calendar formControlName="dateOfBirth"></p-calendar>
+    </div>
+
+    <div class="field">
+      <label>User name</label>
+      <input pInputText type="text" formControlName="userName" />
+    </div>
+
+    <div class="field">
+      <label>New Password</label>
+      <input pInputText type="password" formControlName="userPassword" />
+    </div>
+
+    <div class="field">
+      <label>Confirm Password</label>
+      <input pInputText type="password" formControlName="userConfirmPassword" />
+    </div>
+
+    <button
+      pButton
+      label="Submit"
+      class="p-mt-2 mb-2"
+      style="width: 100%"
+      (click)="storeUserData()"
+      [disabled]="!userRegistartionForm.valid"
+    ></button>
+
+    <p-button
+      label="Cancel"
+      severity="danger"
+      (click)="resetUserForm()"
+      [disabled]="!userRegistartionForm.valid"
+    />
+  </form>
+</div>
