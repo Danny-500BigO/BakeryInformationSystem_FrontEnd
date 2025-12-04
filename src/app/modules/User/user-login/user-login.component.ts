@@ -11,11 +11,12 @@ import {
 import { InputTextModule } from 'primeng/inputtext';
 import { MessagesModule } from 'primeng/messages';
 import { Message } from 'primeng/api';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-user-login',
   standalone: true,
-  imports: [CalendarModule, FormsModule, InputTextModule, ReactiveFormsModule,MessagesModule],
+  imports: [CalendarModule, FormsModule, InputTextModule, ReactiveFormsModule, MessagesModule, NgClass],
   templateUrl: './user-login.component.html',
   styleUrl: './user-login.component.scss',
 })
