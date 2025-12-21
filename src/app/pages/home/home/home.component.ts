@@ -4,13 +4,16 @@ import { MenubarModule } from 'primeng/menubar';
 import { DefaultMenubarComponent } from "../../../shared/ui/Menubars/default-menubar/default-menubar.component";
 import { CardModule } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
+// import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CommonModule} from '@angular/common';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonModule, MenubarModule, DefaultMenubarComponent, CardModule, ChartModule],
+  imports: [CommonModule,ButtonModule, MenubarModule, DefaultMenubarComponent, CardModule, ChartModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

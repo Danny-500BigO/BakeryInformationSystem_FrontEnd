@@ -1,8 +1,22 @@
 <p-menubar>
-    <ng-template pTemplate="start">
-        <b>Bakery Informtion System</b>
-    </ng-template>
-    <ng-template pTemplate="end">
-        <div class="user-icon" pTooltip="User"><fa-icon [icon]="faUser"></fa-icon></div>
-    </ng-template>
+  <ng-template pTemplate="start">
+    <b>Bakery Informtion System</b>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="user-icon" pTooltip="User">
+      <fa-icon [icon]="faUser" (click)="showDialog('topright')"></fa-icon>
+    </div>
+  </ng-template>
 </p-menubar>
+
+<p-dialog
+  header="Register"
+  [(visible)]="loginDialog"
+  [modal]="true"
+  [closable]="true"
+  [dismissableMask]="true"
+  [style]="{ width: '30vw' }"
+  (onHide)="resetForm()"
+>
+  <app-user-login></app-user-login>
+</p-dialog>
