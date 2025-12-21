@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, output } from '@angular/core';
 import { CalendarModule } from 'primeng/calendar';
 
 import {
@@ -16,20 +16,29 @@ import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-user-login',
   standalone: true,
-  imports: [CalendarModule, FormsModule, InputTextModule, ReactiveFormsModule, MessagesModule, NgClass],
+  imports: [
+    CalendarModule,
+    FormsModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    MessagesModule,
+    NgClass,
+  ],
   templateUrl: './user-login.component.html',
   styleUrl: './user-login.component.scss',
 })
 export class UserLoginComponent {
   userRegistartionForm!: FormGroup;
+
   messages: Message[] = [
-    { severity: 'info',closable: false, detail: 'Please fill all required fields' }
+    {
+      severity: 'info',
+      closable: false,
+      detail: 'Please fill all required fields',
+    },
   ];
 
-
-  constructor(private fb: FormBuilder) {
-    
-  }
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.loadUserForm();
@@ -46,17 +55,25 @@ export class UserLoginComponent {
     });
   }
 
-storeUserData(){
-
-  console.log(this.userRegistartionForm.value.firstName);
-}
-
-resetUserForm(){
-
-  if(this.userRegistartionForm.valid){
-      this.userRegistartionForm.reset()
+  storeUserData() {
+    console.log(this.userRegistartionForm.value.firstName);
   }
 
-}
+  resetUserForm() {
+    if (this.userRegistartionForm.valid) {
+      this.userRegistartionForm.reset();
+
+      this.userRegistartionForm.markAsPristine();
+      this.userRegistartionForm.markAsUntouched();
+      this.userRegistartionForm.updateValueAndValidity();
+    }
+  }
+
+  reset() {
+    this.userRegistartionForm.markAsPristine();
+    this.userRegistartionForm.markAsUntouched();
+    this.userRegistartionForm.updateValueAndValidity();
+  }
+
   ngOnDestroy() {}
 }

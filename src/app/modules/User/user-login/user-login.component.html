@@ -138,6 +138,7 @@
       label="Cancel"
       severity="danger"
       (click)="resetUserForm()"
+      (onHide)="reset()"
       [disabled]="!userRegistartionForm.valid"
     />
   </form>

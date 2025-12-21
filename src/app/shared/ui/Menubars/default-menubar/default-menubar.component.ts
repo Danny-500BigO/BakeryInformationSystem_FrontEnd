@@ -36,9 +36,7 @@ export class DefaultMenubarComponent {
   resetForm(){
 
     this.userLogin.resetUserForm();
-//     this.form.markAsPristine();
-// this.form.markAsUntouched();
-// this.form.updateValueAndValidity();
+    this.userLogin.reset();
 
   }
 
