@@ -14,7 +14,7 @@ import { Message } from 'primeng/api';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-user-login',
+  selector: 'app-user-register',
   standalone: true,
   imports: [
     CalendarModule,
@@ -24,8 +24,8 @@ import { NgClass } from '@angular/common';
     MessagesModule,
     NgClass,
   ],
-  templateUrl: './user-login.component.html',
-  styleUrl: './user-login.component.scss',
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.scss',
 })
 export class UserLoginComponent {
   userRegistartionForm!: FormGroup;

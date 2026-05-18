@@ -1,0 +1,133 @@
+.second-div {
+    background-color: #e8e8e8;
+  }
+  
+  .main-card-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .card-content {
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 10px;
+    height: calc(100vh - 250px);
+    color: #007fff;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    //   height: 200px;          /* Adjust height as needed */
+    margin: 15px 15px 15px 15px;
+    background-color: white;
+  }
+  
+  .card-content-two {
+    display: flex;
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 10px;
+    height: calc(100vh - 250px);
+    color: #007fff;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 15px 15px 15px;
+    background-color: white;
+    position: relative;
+  
+    b {
+      padding-top: 20px;
+      color: black;
+    }
+    .orders-filter-by {
+      margin-left: auto;
+      color: #027ffe;
+    }
+  
+    .flip-card-order {
+      position: absolute; /* Position the bold text absolutely */
+      top: 50%; /* Vertically center the bold text (50% from the top) */
+      /* Position it 20px from the right edge of the card */
+      transform: translateY(-50%); /* Adjust for true vertical centering */
+      font-size: 18px; /* Set font size for bold text */
+      text-align: center;
+      color: black;
+    }
+  }
+  
+  .card-content-update {
+    display: flex;
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 10px;
+    height: calc(100vh - 250px);
+    color: #007fff;
+    justify-content: flex-start; /* Horizontally center */
+    align-items: center;
+    margin: 15px 15px 15px 15px;
+    background-color: white;
+    position: relative;
+  
+    // b {
+    //   padding-top: 20px;
+    // }
+    .orders-filter-by {
+      margin-left: auto;
+      color: black;
+    }
+  
+    .title_update {
+      font-size: 16px; /* Title font size */
+      color: black;
+      padding-top: 20px;
+    }
+  
+    .flip-card-order {
+      position: absolute; /* Position the bold text absolutely */
+      top: 50%; /* Vertically center the bold text (50% from the top) */
+      /* Position it 20px from the right edge of the card */
+      transform: translateY(-50%); /* Adjust for true vertical centering */
+      font-size: 18px; /* Set font size for bold text */
+      text-align: center;
+      color: black;
+    }
+  }
+  
+  .secondry-card-header {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px 15px 15px;
+  
+    .order-card-content {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      width: 100%;
+      border: 1px solid rgb(227, 227, 227);
+      border-radius: 6px;
+      background-color: white;
+    }
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .card-footer {
+    text-align: center;
+    padding: 0.5rem;
+    color: #666;
+  }
+  

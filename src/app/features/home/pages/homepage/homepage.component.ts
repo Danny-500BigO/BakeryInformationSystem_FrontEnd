@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
-import { DefaultMenubarComponent } from "../../../shared/ui/Menubars/default-menubar/default-menubar.component";
+import { DefaultMenubarComponent } from "../../../../shared/ui/Menubars/default-menubar/default-menubar.component";
 import { CardModule } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 // import { BrowserModule } from '@angular/platform-browser';
@@ -14,8 +14,8 @@ import {CommonModule} from '@angular/common';
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule,ButtonModule, MenubarModule, DefaultMenubarComponent, CardModule, ChartModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  templateUrl: './homepage.component.html',
+  styleUrl: './homepage.component.scss'
 })
 export class HomeComponent {
   basicData: any;

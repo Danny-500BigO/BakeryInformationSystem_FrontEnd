@@ -1,0 +1,63 @@
+<div class="p-fluid">
+    <p-messages [value]="messages"></p-messages>
+  
+    <form class="Submit" [formGroup]="userLoginForm">
+      <div class="field">
+        <label>User Name</label>
+        <input
+          pInputText
+          type="text"
+          id="uName"
+          formControlName="userName"
+          [ngClass]="{
+            'ng-invalid ng-dirty':
+              userLoginForm.get('userName')?.invalid &&
+              userLoginForm.get('userName')?.touched
+          }"
+        />
+  
+        @if(userLoginForm.get('userName')?.invalid &&
+        userLoginForm.get('userName')?.touched){
+        <small class="p-error"> Username is required </small>
+        }
+      </div>
+  
+      <div class="field">
+        <label>Password</label>
+        <input
+          pInputText
+          type="password"
+          id="password"
+          formControlName="uPassword"
+          [ngClass]="{
+            'ng-invalid ng-dirty':
+              userLoginForm.get('uPassword')?.invalid &&
+              userLoginForm.get('uPassword')?.touched
+          }"
+        />
+  
+        @if(userLoginForm.get('uPassword')?.invalid &&
+        userLoginForm.get('uPassword')?.touched){
+        <small class="p-error"> password is required </small>
+        }
+      </div>
+
+  
+      <button
+        pButton
+        label="Submit"
+        class="p-mt-2 mb-2"
+        style="width: 100%"
+       
+        [disabled]="!userLoginForm.valid"
+      ></button>
+  
+      <p-button
+        label="Cancel"
+        severity="danger"
+        
+        [disabled]="!userLoginForm.valid"
+      />
+    </form>
+  </div>
+  

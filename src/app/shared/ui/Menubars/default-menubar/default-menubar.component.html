@@ -10,7 +10,7 @@
 </p-menubar>
 
 <p-dialog
-  header="Register"
+  header="Login"
   [(visible)]="loginDialog"
   [modal]="true"
   [closable]="true"
@@ -18,5 +18,6 @@
   [style]="{ width: '30vw' }"
   (onHide)="resetForm()"
 >
-  <app-user-login></app-user-login>
+  <!-- <app-user-login></app-user-login> -->
+  <app-login></app-login>
 </p-dialog>
