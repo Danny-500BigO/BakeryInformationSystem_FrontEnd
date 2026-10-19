@@ -48,14 +48,14 @@
         label="Submit"
         class="p-mt-2 mb-2"
         style="width: 100%"
-       
+        (click)="userlogin()"
         [disabled]="!userLoginForm.valid"
       ></button>
   
       <p-button
         label="Cancel"
         severity="danger"
-        
+       
         [disabled]="!userLoginForm.valid"
       />
     </form>

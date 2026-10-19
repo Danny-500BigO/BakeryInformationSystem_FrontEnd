@@ -5,6 +5,8 @@ import { Message } from 'primeng/api'
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { MessagesModule } from 'primeng/messages';
+import { AuthService } from '../../../../core/services/auth/auth.service';
+import { LoginRequest } from '../../models/login/loginRequestModel';
 
 
 @Component({
@@ -21,6 +23,7 @@ import { MessagesModule } from 'primeng/messages';
 export class loginComponent {
 
   userLoginForm!:FormGroup;
+  
 
   messages: Message[] = [
     {
@@ -30,7 +33,7 @@ export class loginComponent {
     },
   ];
 
-  constructor(private fb:FormBuilder){
+  constructor(private fb:FormBuilder, private authservice:AuthService ){
     
   }
 
@@ -47,6 +50,26 @@ export class loginComponent {
     });
 
   }
+
+    userlogin(){
+      alert("hhhh");
+
+  const request: LoginRequest = {
+  user_name: this.userLoginForm.value.userName!,
+  password: this.userLoginForm.value.uPassword!
+};
+
+  this.authservice.userlogin(request).subscribe({
+    next: (response) => {
+    console.log('Login successful');
+  },
+  error: (error) => {
+    console.error('Login failed', error);
+  }
+  });
+
+
+    } 
 
 
 
